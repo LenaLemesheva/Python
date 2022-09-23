@@ -3,3 +3,8 @@
 #        ◦ 1, 4, 8, 7, 5 -> 8
 #        ◦ 78, 55, 36, 90, 2 -> 90
 
+m = 0
+for i in range(5):
+    x = int(input())
+    if m < x : m = x
+print(m)
