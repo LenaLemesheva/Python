@@ -5,9 +5,15 @@
 #         ◦ 5 -> нет
 #         ◦ 0,34 -> 3
 
-N = float(input('Введите число - '))
-N = (N * 10) % 10
-if N > 0:
-    print(int(N))
-else:
+# N = float(input('Введите число - '))
+# N = (N * 10) % 10
+# if N > 0:
+#     print(int(N))
+# else:
+#     print('нет')
+
+N = float(input())
+if N == int(N):
     print('нет')
+else:
+    print(int(N * 10) % 10)
