@@ -16,7 +16,10 @@
 # number.remove('2')
 # print(number)
 
+# number = list(str(123))
+# del number[1]
+# print(number)
+
 number = list(str(123))
 del number[1]
-print(number)
-
+print(''.join(number))  # собрать
