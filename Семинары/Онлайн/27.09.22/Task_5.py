@@ -12,6 +12,11 @@
 # number = str(123)
 # print(number[0] + number[2])
 
+# number = list(str(123))
+# number.remove('2')
+# print(number)
+
 number = list(str(123))
-number.remove('2')
+del number[1]
 print(number)
+
