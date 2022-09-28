@@ -9,5 +9,9 @@
 # res = n1 * 10 + n2
 # print(res)
 
-number = str(123)
-print(number[0] + number[2])
+# number = str(123)
+# print(number[0] + number[2])
+
+number = list(str(123))
+number.remove('2')
+print(number)
