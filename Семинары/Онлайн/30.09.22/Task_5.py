@@ -7,13 +7,27 @@
 #     • список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 #     • список: [], ищем: "123", ответ: -1
 
+# lst = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
+# a = "qwe"
+# count = 0
+# for i in range(len(lst)):
+#     if a == lst[i]:
+#         count += 1
+#     if count == 2:
+#         print(i)
+# if count == 0:
+#     print("Строки нет")
+
+from itertools import count
+
+
 lst = ["qwe", "asd", "zxc", "qwe", "ertqwe"]
-a = "qwe"
-count = 0
-for i in range(len(lst)):
-    if a == lst[i]:
+x = "qwe"
+count = 0 
+k = 0
+for i in lst:
+    k += 1
+    if i == x:
         count += 1
-    if count == 2:
-        print(i)
-if count == 0:
-    print("Строки нет")
+        if count == 2:
+            print(k)
