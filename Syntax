@@ -236,3 +236,208 @@ sp = [11, 20, 43, 74, 95, 6, 7, 8]
 # print(sp[-3:]) # последние 3
 # print(type(sp[-5:-1])) # срез
 # print(type(sp[6])) # элемент
+
+# a - открытие для добавления данных
+# r - открытие для чтения данных
+# w - открытие для записи данных
+
+
+# Создаем, изменяем
+
+# with open('file.txt', 'w') as data:
+#     data.write('line 1\n')
+#     data.write('line 2\n')
+
+# color = ['red', 'green', 'blue']
+# data = open('file.txt', 'a')
+# data.writelines(color)  # разделителей не будет
+# data.write('LINE 12\n')
+# data.write('LINE 13\n')
+# data.close()
+
+
+# Читаем
+
+# path = 'file.txt'
+# data = open(path, 'r')
+# for line in data:
+#     print(line)
+# data.close()
+
+# exit()
+
+
+# Функции и модули
+
+
+
+# import hello        # дергать скрипт из соседнего файла
+# print(hello.f(1))
+
+# import hello as h       # переименовать файл
+# print(h.f(1))
+
+
+
+# def new_string(symbol, count): # умножение символа на число
+#     return symbol * count
+# print(new_string('!', 5)) # !!!!!
+# print(new_string('!'))    # без числа будет ошибка
+
+# def new_string(symbol, count = 3): # умножение символа на конкретное число
+#     return symbol * count
+# print(new_string('!')) # !!!!!
+
+# def new_string(symbol, count = 3): # умножение 4 на 3
+#     return symbol * count
+# print(new_string('4')) # 12
+
+
+
+# def concatenatio(*params):   # передача неограниченного количества элементов
+#     res: str = ""
+#     for item in params:
+#         res += item
+#     return res
+# print(concatenatio('a', 's', 'd', 'w')) # asdw
+# print(concatenatio('a', '1', 'd', '2')) # a1d2
+# print(concatenatio(1, 2, 3, 4)) # общибка, т.к. не строка, а числа
+
+# def concatenatio(*params):   # передача неограниченного количества элементов
+#     res: int = 0
+#     for item in params:
+#         res += item
+#     return res
+# print(concatenatio(1, 2, 3, 4)) # числа, и получают 1+2+3+4 = 10
+
+
+# Рекурсия
+
+
+# def fib(n):
+#     if n in [1, 2]:
+#         return 1
+#     else:
+#         return fib(n-1) + fib(n-2)
+# list = []
+# for e in range(1, 10):
+#     list.append(fib(e))
+# print(list) # 1 1 2 3 5 8 13 21 34
+
+
+# Кортежи (массивы)
+
+
+# a = (3, 4)  # массив
+# print(a)    # (3, 4)
+# print(a[0]) # элемент 0 из массива, т.е. 3
+
+
+# Кортеж - это неизменяемый "список"
+# t = ()
+# print(type(t))                     # tuple
+# t = (1,)
+# print(type(t))                     # tuple
+# t = (1)
+# print(type(t))                     # int
+# t = (28, 9, 1990)
+# print(type(t))                     # tuple
+# colors = ('red', 'green', 'blue')
+# print(colors)                      # ['red', 'green', 'blue']
+# t = tuple(colors)
+# print(t)                           # ['red', 'green', 'blue']
+
+
+# a = (3, 4, 5)  # перебираем кортеж
+# for item in a:
+#     print(item)
+
+
+# t = tuple(['red', 'green', 'blue'])  # распаковать кортеж в отдельные переменные
+# red, green, blue = t
+# print ('r:{} g:{} b:{}'.format(red, green, blue))  # r:red g:green b:blue
+
+
+
+# Словари
+
+# Неупорядоченные коллекции произвольных объектов с доступом по ключу
+
+# dictionary = {}
+# dictionary = \  # нужен \ чтобы не писать в одну строку
+# {
+#         'up': '|',    # стрелки
+#         'left': '-',
+#         'down': '|',
+#         'right': '-'
+# }
+# print(dictionary)    # {'up':'|', 'left':'-', 'down':'|', 'right':'-'}
+# print(dictionary['left'])   # -
+# # типы ключей могут отличаться
+
+
+# for k in dictionary.keys():  # получить все ключи
+#     print(k)
+
+
+# for k in dictionary.values():  # получить все значения
+#     print(k)
+
+
+
+# Множества
+
+
+# colors = {'red', 'green', 'blue'}
+# print(colors)                     # {'red', 'green', 'blue'}
+# colors.add('red')
+# print(colors)                     # {'red', 'green', 'blue'}
+# colors.add('gray')
+# print(colors)                     # {'red', 'green', 'blue', 'gray'}
+# colors.remove('red')
+# print(colors)                     # {'green', 'blue', 'gray'}
+# # colors.remove('red')  # KeyError: 'red'
+# colors.discard('red')  # ok
+# print(colors)                     # {'green', 'blue', 'gray'}
+# colors.clear()   # {}
+# print(colors)                     # set()
+
+
+# a = {1, 2, 3, 5, 8}
+# b = {2, 5, 8, 13, 21}
+# c = a.copy()             # c = {1, 2, 3, 5, 8}
+# u = a.union(b)           # u = {1, 2, 3, 5, 8, 13, 21}
+# i = a.intersection(b)    # i = {8, 2, 5}
+# dl = a.difference(b)     # dl = {1, 3}
+# dr = b.difference(a)     # dr = {13, 21}
+
+# q = a \
+#     .union(b) \
+#     .difference(a.intersection(b))
+# # {1, 21, 3, 13}
+
+# s = frozenset(a)   # замороженное множество
+
+
+
+# Списки
+
+
+# list1 = [1,2,3,4,5]
+# list2 = list1
+# for e in list1:
+#     print(e)
+# print()   # пустая строка
+# for e in list2:
+#     print(e)
+
+# list1[0] = 123 # меняешь в 1 списки и меняется во 2
+# list2[1] = 333 # меняешь во 2 списке и меняется в 1
+
+
+# list1 = [1,2,3,4,5]
+# print(list1.pop())  # удаляет последний элемент
+# print(len(list1))   # сколько элементов осталось в листе
+# print(list1.pop(2)) # удалить конкретный элемент
+# print(list1.insert(2, 11)) # вставить на нужную позицию (11 встанет на позицию 2)
+# print(list1.append(11)) # добавить в конец (11 встанет на позицию 5)
