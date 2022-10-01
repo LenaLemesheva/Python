@@ -3,15 +3,19 @@
 # в котором они встречаются в списке.
 # Например: 1 2 2 3 3 3 - 1.
 
-lst = [1, 2, 5, 6, 7, 2, 3, 4, 6]
-lst2 = []
-count = 0
-for i in lst:
-    for j in lst:
-        if i == j:
-            count += 1
-    if count == 1:
-        lst2.append(i)
-    count = 0
-print(lst2)
+# lst = [1, 2, 5, 6, 7, 2, 3, 4, 6]
+# lst2 = []
+# count = 0
+# for i in lst:
+#     for j in lst:
+#         if i == j:
+#             count += 1
+#     if count == 1:
+#         lst2.append(i)
+#     count = 0
+# print(lst2)
 
+ist = [int(i) for i in input("Введите числа через пробел: ").split()] # Считываем строку, split превращает в список, перебираем все элементы списка, и превращаем их в целые числа
+for i in ist:
+    if ist.count(i) == 1:
+        print(i)
