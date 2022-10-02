@@ -23,6 +23,6 @@ MORSE = {'A': '.-', 'B': '-...', 'C': '-.-.',
          'V': '...-', 'W': '.--', 'X': '-..-',
          'Y': '-.--', 'Z': '--..'}
 text = input('Введите текст - ').upper().split() # преобразовывает в отдельные слова с большой буквы
-# print(text)
+print(text)
 for morse_text in text:
     print(" ".join([MORSE[symbols] for symbols in morse_text]))
