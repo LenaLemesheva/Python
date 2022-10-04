@@ -7,21 +7,20 @@
 
 # Вариант 1.
 
-# vocab = {}
-# text = open('text.txt', 'r')
-# for line in text:
-#     a = line.split()
-#     if len(a) == 2:
-#         vocab[a[0]] = a[1]
-#     if len(a) == 1:
-#         word = a[0]
-# text.close()
-# print (f"Ищем синоним слова: {word}")
-# for k, v in vocab.items():
-#     if v == word:
-#         print(k)
-#     if k == word:
-#         print(v)
+text = 'one two one tho three'
+text = text.split()
+double = {}
+for i in text:
+    if i in double:
+        double[i] += 1
+        print(double[i], end=' ')
+    else:
+        double[i] = 0
+        print(double[i], end=' ')
+for key in double:
+    if double[key] > 0:
+        print(key, 'Встречается более 1 раза')
+
 
 # Вариант 2.
 
