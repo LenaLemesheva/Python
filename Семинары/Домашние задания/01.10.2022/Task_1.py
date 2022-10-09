@@ -3,9 +3,13 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-ist = [int(i) for i in input("Введите числа через пробел: ").split()]
-ist = ist[1::2]
-sum = 0
-for i in range(len(ist)):
-    sum = sum + ist[i]
-print(sum)
+# ist = [int(i) for i in input("Введите числа через пробел: ").split()]
+# ist = ist[1::2]
+# sum = 0
+# for i in range(len(ist)):
+#     sum = sum + ist[i]
+# print(sum)
+
+
+spisok = [2, 3, 5, 9, 3]
+print(sum(spisok[1::2]))
