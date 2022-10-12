@@ -22,5 +22,7 @@ ids = [4, 5, 9, 14, 7]
 salary = [111,222,333]
 temp = [list(i) for i in zip(users, ids, salary)]
 # temp = [list(i) for i in zip_longest(users, ids, salary, fillvalue='')]  # если список разной длины
+# for i in range(len(temp)):  # убираем пустоты
+#      temp[i] = list(filter(lambda x: x, temp[i]))
 print(temp)
 print(list(zip(*temp))) # * для распаковки итерируемых объектов в список/кортеж
