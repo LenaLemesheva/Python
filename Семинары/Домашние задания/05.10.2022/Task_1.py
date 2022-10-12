@@ -5,4 +5,4 @@
 from math import pi
 
 d = float(input('Введите число с заданной точностью - '))
-print(f'Число Пи равно - ', round(pi, 3))
+print(f'Число Пи равно - ', round(pi, str(d).count('0')))
