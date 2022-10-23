@@ -6,7 +6,7 @@ from bot_commands import *
 #     update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
 
-updater = Updater("5782309281:AAGR51gqRpEe8aCrqrIEN37JIgEn2THOqGY")
+updater = Updater("-")
 
 updater.dispatcher.add_handler(CommandHandler("hi", hi_command))
 updater.dispatcher.add_handler(CommandHandler("time", time_command))
